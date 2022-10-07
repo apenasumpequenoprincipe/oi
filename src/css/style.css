@@ -1,0 +1,127 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: rgb(78, 78, 78);
+    overflow: hidden;
+
+}
+main {
+    overflow: hidden;
+    position: relative;
+
+}
+.intro {
+    height: 100vh;
+    position: relative;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    animation-fill-mode: forwards;
+}
+
+.fundo {
+    height: 100%;
+    background: rgb(48, 48, 48) url(../imgs/bg.jpg) left center no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.intro-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    animation-duration: .3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    animation-fill-mode: forwards;
+}
+
+.intro .botao {
+    height: 3.4rem;
+    width: 50%;
+    font-weight: 400;
+    color: white;
+    font-size: 120%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px -5px;
+}
+
+.conteiner-video {
+    background: rgb(4, 4, 44) url(../imgs/bg-estrelas.png) center center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: 2;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.conteiner-video #video {
+    width: 100%;
+    
+}
+
+.pequeno {
+    width: 50vw;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 5;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes intro {
+    from {
+        left: 0%;
+        opacity: 1;
+        font-size: 120%;
+    }
+
+    to {
+        left: calc(+100%);
+        opacity: 3;
+        font-size: 0;
+
+    }
+}
+
+@keyframes apresentacao {
+    from {top: 0%;
+        left: -100%;
+    }
+    to {
+        top: 0%;
+        left: 0%;
+    }
+}
+
+@keyframes pequeno {
+    from {
+        top: 100%;
+        left: 50%;
+    }
+
+    to {
+        top: -100%;
+        left: -70%;
+    }
+}
